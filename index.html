@@ -13,7 +13,7 @@
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
             color: white;
             overflow-x: hidden;
         }
@@ -31,9 +31,9 @@
 
         .particle {
             position: absolute;
-            width: 4px;
-            height: 4px;
-            background: rgba(255, 255, 255, 0.6);
+            width: 3px;
+            height: 3px;
+            background: rgba(255, 255, 255, 0.4);
             border-radius: 50%;
             animation: float 6s ease-in-out infinite;
         }
@@ -49,7 +49,7 @@
             top: 0;
             width: 100%;
             padding: 20px 0;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(0, 0, 0, 0.8);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             z-index: 1000;
@@ -68,7 +68,7 @@
         .logo {
             font-size: 24px;
             font-weight: 700;
-            background: linear-gradient(45deg, #ff6b6b, #ffd93d);
+            background: linear-gradient(45deg, #ffffff, #cccccc);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -89,7 +89,7 @@
         }
 
         .nav-links a:hover {
-            color: #ffd93d;
+            color: #cccccc;
             transform: translateY(-2px);
         }
 
@@ -100,7 +100,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: #ffd93d;
+            background: #cccccc;
             transition: width 0.3s ease;
         }
 
@@ -127,7 +127,7 @@
             font-size: clamp(3rem, 8vw, 6rem);
             font-weight: 800;
             margin-bottom: 20px;
-            background: linear-gradient(45deg, #ff6b6b, #ffd93d, #4ecdc4);
+            background: linear-gradient(45deg, #ffffff, #cccccc, #888888);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -149,19 +149,24 @@
         .cta-button {
             display: inline-block;
             padding: 15px 40px;
-            background: linear-gradient(45deg, #ff6b6b, #ffd93d);
+            background: linear-gradient(45deg, #333333, #666666);
             color: white;
             text-decoration: none;
             border-radius: 50px;
             font-weight: 600;
             font-size: 1.1rem;
             transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+            z-index: 10;
         }
 
         .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+            background: linear-gradient(45deg, #555555, #888888);
+            border-color: rgba(255, 255, 255, 0.4);
         }
 
         @keyframes fadeInUp {
@@ -186,7 +191,7 @@
             font-size: 3rem;
             text-align: center;
             margin-bottom: 60px;
-            background: linear-gradient(45deg, #ff6b6b, #ffd93d);
+            background: linear-gradient(45deg, #ffffff, #cccccc);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -200,11 +205,11 @@
         }
 
         .project-card {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.05);
             border-radius: 20px;
             padding: 30px;
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -217,7 +222,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
             transition: left 0.5s;
         }
 
@@ -227,25 +232,27 @@
 
         .project-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            border-color: rgba(255, 255, 255, 0.2);
         }
 
         .project-icon {
             width: 60px;
             height: 60px;
-            background: linear-gradient(45deg, #ff6b6b, #ffd93d);
+            background: linear-gradient(45deg, #333333, #666666);
             border-radius: 15px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 24px;
             margin-bottom: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .project-card h3 {
             font-size: 1.5rem;
             margin-bottom: 15px;
-            color: #ffd93d;
+            color: #ffffff;
         }
 
         .project-card p {
@@ -262,11 +269,11 @@
         }
 
         .tag {
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.1);
             padding: 5px 15px;
             border-radius: 20px;
             font-size: 0.9rem;
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .project-links {
@@ -275,14 +282,14 @@
         }
 
         .project-link {
-            color: #ffd93d;
+            color: #cccccc;
             text-decoration: none;
             font-weight: 500;
             transition: all 0.3s ease;
         }
 
         .project-link:hover {
-            color: #ff6b6b;
+            color: #ffffff;
             transform: translateX(5px);
         }
 
@@ -299,7 +306,7 @@
 
         .scroll-progress {
             height: 100%;
-            background: linear-gradient(90deg, #ff6b6b, #ffd93d);
+            background: linear-gradient(90deg, #666666, #cccccc);
             width: 0%;
             transition: width 0.1s ease;
         }
